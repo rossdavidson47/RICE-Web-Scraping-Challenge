@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- starter code from 10-stu-scrape-weater -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nars Data Home Page, by Ross Davidson</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars...</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
+    </div>
+
+    <!-- Mars News -->
+    <div class="row" id="mars-news">
+      <div class="col-md-12">
+        <h1>Latest Mars News </h1>
+        <h3>{{mars_data.news_title}}</h3>
+        <h4>{{mars_data.news_paragraph}}</h4>
+        <p>Source: MongoDB</p>
+      </div>
+    </div>
+
+    <!-- Featured Mars Image -->
+    <div class="row">
+      <div class="col-md-6">
+        <h1> Featured Mars Image</h1>
+        <img src='{{mars_data.featured_image_url}}'>
+      </div>
+    <!-- Current Weather on Mars -->  
+    <div class="col-md-3">
+      <div class="card">
+          <h2 class="card-header">Weather</h2>
+          <div class="card-body">
+            <h4 class="card-title">{{mars_data.mars_weather.text}}</h4>
+          </div>
+        </div>
+    </div>
+    <!-- Mars Facts #MarsFacts -->  
+    <div class="col-md-2">
+      <div class="card">
+          <h2 class="card-header">Facts</h2>
+          <div class="card-body">
+            <h4 class="card-title">{{mars_data.Mars_Planet_Profile}}</h4>
+          </div>
+        </div>
+      </div>
+     <!-- Mars Hemispheres Title -->  
+     <br>
+     <br>
+     <br>  
+    <hr>
+    <div class="row">
+        <div class="col-md-12  text-center">
+            <h1>Mars Hemispheres</h1>
+            <br>
+        </div>
+    </div>
+    <!-- Mars Hemispheres Pictures-->  
+    <div class="row">
+        <div class="col-md-6">
+        <div class="card">
+          <img src="{{mars_data.hemisphere_image_urls}}" class="card-img-top"" style="width: 400px;">
+          
+        </div>
+      </div>
+      </div>
+  </div>
+</body>
+
+</html>
